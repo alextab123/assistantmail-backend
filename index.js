@@ -37,6 +37,11 @@ app.post("/api/gpt", async (req, res) => {
   }
 });
 
+// ✅ Route pour tester que le backend fonctionne
+app.get("/", (req, res) => {
+  res.send("✅ Serveur backend opérationnel !");
+});
+
 app.listen(PORT, () => {
   console.log(`✅ Serveur lancé sur http://localhost:${PORT}`);
 });
